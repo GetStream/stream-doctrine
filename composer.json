@@ -1,0 +1,33 @@
+{
+    "name": "get-stream/stream-doctrine",
+    "homepage": "https://getstream.io/",
+    "description": "Build newsfeeds and activity feeds with Doctrine using getstream.io",
+    "keywords": ["stream", "feed", "feedly", "getstream", "activity", "newsfeed", "activity feed", "notification feed", "aggregated feed", "doctrine", "symfony", "orm"],
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Hannes Van De Vreken",
+            "email": "hannes@getstream.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GetStream\\Doctrine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GetStream\\Doctrine\\Unit\\": "tests/unit",
+            "GetStream\\Doctrine\\Stubs\\": "tests/stubs"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.5",
+        "get-stream/stream": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4",
+        "cakephp/chronos": "^1.1"
+    },
+    "minimum-stability": "stable"
+}
