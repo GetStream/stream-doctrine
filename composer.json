@@ -26,8 +26,8 @@
         "get-stream/stream": "^2.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4",
-        "cakephp/chronos": "^1.1"
+        "cakephp/chronos": "^1.1",
+        "phpunit/phpunit": "^5.7"
     },
     "minimum-stability": "stable"
 }

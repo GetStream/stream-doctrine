@@ -15,4 +15,5 @@ before_script:
 script:
   - vendor/bin/phpunit
 after_script:
+  - if [[ "$COLLECT_COVERAGE" == "true" ]]; then composer req satooshi/php-coveralls --dev; fi
   - if [[ "$COLLECT_COVERAGE" == "true" ]]; then vendor/bin/coveralls; fi
