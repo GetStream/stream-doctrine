@@ -31,7 +31,7 @@ class Activity implements ActivityInterface
      */
     public function activityActor()
     {
-        return 'user:2';
+        return '\User:2';
     }
 
     /**

@@ -34,7 +34,7 @@ class ModelListenerTest extends TestCase
 
         $manager->method('getUserFeed')->with('2')->willReturn($feed);
         $feed->method('addActivity')->with([
-            'actor' => 'user:2',
+            'actor' => '\User:2',
             'verb' => 'like',
             'object' => 'GetStream\Doctrine\Stubs\Activity:1',
             'foreign_id' => 'GetStream\Doctrine\Stubs\Activity:1',
