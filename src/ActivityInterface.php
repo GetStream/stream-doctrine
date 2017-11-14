@@ -5,8 +5,8 @@ namespace GetStream\Doctrine;
 interface ActivityInterface
 {
     /**
-     * Like activityActor but without the colon and the namespacing which is often `user:`.
-     * Example `1` (from `user:1`).
+     * Like activityActor but without the colon and the namespacing which is often `\App\User:`.
+     * Example `1` (from `\App\User:1`).
      *
      * @return string
      */
@@ -14,7 +14,7 @@ interface ActivityInterface
 
     /**
      * Returns a reference to the user performed the activity.
-     * Example: `user:eric liked tweet:5`, in this case the 'user:eric' is the actor.
+     * Example: `\App\User:eric liked \App\Tweet:5`, in this case the 'user:eric' is the actor.
      *
      * @return string
      */
