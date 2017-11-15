@@ -1,6 +1,7 @@
 # Stream Doctrine
 
 [![Build Status](https://travis-ci.org/GetStream/stream-doctrine.svg?branch=master)](https://travis-ci.org/GetStream/stream-doctrine)
+[![Code Quality](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/)
 
 [stream-doctrine](https://github.com/GetStream/stream-doctrine) is a package that integrates you Doctrine entities with [Stream](https://getstream.io/).
 
