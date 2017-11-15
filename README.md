@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/GetStream/stream-doctrine.svg?branch=master)](https://travis-ci.org/GetStream/stream-doctrine)
 [![Code Coverage](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/)
 [![Code Quality](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/)
+[![Latest Stable Version](https://poser.pugx.org/get-stream/stream-doctrine/v/stable)](https://packagist.org/packages/get-stream/stream-doctrine)
+[![Total Downloads](https://poser.pugx.org/get-stream/stream-doctrine/downloads)](https://packagist.org/packages/get-stream/stream-doctrine)
+[![License](https://poser.pugx.org/get-stream/stream-doctrine/license)](https://packagist.org/packages/get-stream/stream-doctrine)
 
 [stream-doctrine](https://github.com/GetStream/stream-doctrine) is a package that integrates you Doctrine entities with [Stream](https://getstream.io/).
 
