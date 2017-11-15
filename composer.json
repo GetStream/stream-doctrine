@@ -23,7 +23,7 @@
     },
     "require": {
         "doctrine/orm": "^2.5",
-        "get-stream/stream": "^2.4"
+        "get-stream/stream": "^2.5.1"
     },
     "require-dev": {
         "cakephp/chronos": "^1.1",

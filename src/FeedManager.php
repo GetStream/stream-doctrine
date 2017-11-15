@@ -132,7 +132,7 @@ class FeedManager implements FeedManagerInterface
         $targetFeed = $this->getUserFeed($targetUserId);
 
         foreach ($newsFeeds as $feed) {
-            $feed->followFeed($targetFeed->getSlug(), $targetFeed->getUserId());
+            $feed->follow($targetFeed->getSlug(), $targetFeed->getUserId());
         }
     }
 
@@ -146,7 +146,7 @@ class FeedManager implements FeedManagerInterface
         $targetFeed = $this->getUserFeed($targetUserId);
 
         foreach ($newsFeeds as $feed) {
-            $feed->unfollowFeed($targetFeed->getSlug(), $targetFeed->getUserId());
+            $feed->unfollow($targetFeed->getSlug(), $targetFeed->getUserId());
         }
     }
 }
