@@ -15,5 +15,4 @@ before_script:
 script:
   - vendor/bin/phpunit
 after_script:
-  - if [[ "$COLLECT_COVERAGE" == "true" ]]; then composer req satooshi/php-coveralls --dev; fi
-  - if [[ "$COLLECT_COVERAGE" == "true" ]]; then vendor/bin/coveralls; fi
+  - if [[ "$COLLECT_COVERAGE" == "true" ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml; fi
