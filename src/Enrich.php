@@ -90,7 +90,7 @@ class Enrich implements EnrichInterface
      */
     private function wrapActivities(array $activities)
     {
-        return array_map(function (array $activity) {
+        return array_map(function(array $activity) {
             return new EnrichedActivity($activity);
         }, $activities);
     }
@@ -140,7 +140,7 @@ class Enrich implements EnrichInterface
                     ->where(new Comparison('id', Comparison::IN, $identifiers))
                 )->getValues(); 
 
-            $keys = array_map(function ($item) {
+            $keys = array_map(function($item) {
                 return $item->id();
             }, $result);
 
