@@ -138,7 +138,7 @@ class Enrich implements EnrichInterface
                 ->getRepository($type)
                 ->matching(Criteria::create()
                     ->where(new Comparison('id', Comparison::IN, $identifiers))
-                )->getValues();
+                )->getValues(); 
 
             $keys = array_map(function ($item) {
                 return $item->id();
