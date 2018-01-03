@@ -4,7 +4,6 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/)
 [![Code Quality](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GetStream/stream-doctrine/)
 [![Latest Stable Version](https://poser.pugx.org/get-stream/stream-doctrine/v/stable)](https://packagist.org/packages/get-stream/stream-doctrine)
-[![Total Downloads](https://poser.pugx.org/get-stream/stream-doctrine/downloads)](https://packagist.org/packages/get-stream/stream-doctrine)
 [![License](https://poser.pugx.org/get-stream/stream-doctrine/license)](https://packagist.org/packages/get-stream/stream-doctrine)
 
 [stream-doctrine](https://github.com/GetStream/stream-doctrine) is a package that integrates you Doctrine entities with [Stream](https://getstream.io/).
@@ -49,6 +48,23 @@ Now, login to [GetStream.io](https://getstream.io) and create an application in 
 Retrieve the API key, API secret, and API app id, which are shown in your dashboard.
 
 ## Stream-Doctrine setup
+
+### Setup
+
+To register this plugin into Doctrine ORM, you need to register a `ModelListener` on the EntityManager like this:
+
+```php
+$client = new GetStream\Stream\Client($apiKey, $apiSecret);
+
+$manager = new GetStream\Doctrine\FeedManager($client);
+
+$listener = new GetStream\Doctrine\ModelListener($manager);
+
+$entityManager
+    ->getConfiguration()
+    ->getEntityListenerResolver()
+    ->register($listener);
+```
 
 ### Features of Stream-Doctrine
 
