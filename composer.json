@@ -3,7 +3,7 @@
     "homepage": "https://getstream.io/",
     "description": "Build newsfeeds and activity feeds with Doctrine using getstream.io",
     "keywords": ["stream", "feed", "feedly", "getstream", "activity", "newsfeed", "activity feed", "notification feed", "aggregated feed", "doctrine", "symfony", "orm"],
-    "license": "BSD",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Hannes Van De Vreken",
