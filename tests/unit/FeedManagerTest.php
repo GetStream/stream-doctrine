@@ -117,7 +117,7 @@ class FeedManagerTest extends TestCase
 
         $userFeed->method('getSlug')->willReturn('user');
         $userFeed->method('getUserId')->willReturn('2');
-        $newsFeed->method('followFeed')->with('user', '2')->willReturn(null);
+        $newsFeed->method('follow')->with('user', '2')->willReturn(null);
 
         $client->method('feed')->withConsecutive(['news', '1'], ['user', '2'])->willReturnOnConsecutiveCalls($newsFeed, $userFeed);
 
@@ -144,7 +144,7 @@ class FeedManagerTest extends TestCase
 
         $userFeed->method('getSlug')->willReturn('user');
         $userFeed->method('getUserId')->willReturn('2');
-        $newsFeed->method('unfollowFeed')->with('user', '2')->willReturn(null);
+        $newsFeed->method('unfollow')->with('user', '2')->willReturn(null);
 
         $client->method('feed')->withConsecutive(['news', '1'], ['user', '2'])->willReturnOnConsecutiveCalls($newsFeed, $userFeed);
 
