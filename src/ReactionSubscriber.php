@@ -25,7 +25,7 @@ class ReactionSubscriber implements EventSubscriber
      *
      * @return string[]
      */
-    public function getSubscribedEvents(): array
+    public function getSubscribedEvents()
     {
         return [
             Events::prePersist,
@@ -34,7 +34,7 @@ class ReactionSubscriber implements EventSubscriber
         ];
     }
 
-    public function prePersist(LifecycleEventArgs $args): void
+    public function prePersist(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
 
@@ -54,7 +54,7 @@ class ReactionSubscriber implements EventSubscriber
         }
     }
 
-    public function postUpdate(LifecycleEventArgs $args): void
+    public function postUpdate(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
 
@@ -63,7 +63,7 @@ class ReactionSubscriber implements EventSubscriber
         }
     }
 
-    public function preRemove(LifecycleEventArgs $args): void
+    public function preRemove(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
 

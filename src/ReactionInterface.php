@@ -4,21 +4,50 @@ namespace GetStream\Doctrine;
 
 interface ReactionInterface
 {
-    public function getReactionId(): string;
+    /**
+     * @return string
+     */
+    public function getReactionId();
 
-    public function setReactionId(string $reactionId);
+    /**
+     * @param string $reactionId
+     *
+     * @return $this
+     */
+    public function setReactionId($reactionId);
 
-    public function getReactionKind(): string;
+    /**
+     * @return string
+     */
+    public function getReactionKind();
 
-    public function getReactionActivityId(): string;
+    /**
+     * @return string
+     */
+    public function getReactionActivityId();
 
-    public function getReactionActivityForeignId(): string;
+    /**
+     * @return string
+     */
+    public function getReactionActivityForeignId();
 
-    public function getReactionActivityTime(): \DateTimeImmutable;
+    /**
+     * @return \DateTimeImmutable
+     */
+    public function getReactionActivityTime();
 
-    public function getUserId(): string;
+    /**
+     * @return string
+     */
+    public function getUserId();
 
-    public function getReactionData(): ?array;
+    /**
+     * @return array|null
+     */
+    public function getReactionData();
 
-    public function getReactionTargets(): ?array;
+    /**
+     * @return array|null
+     */
+    public function getReactionTargets();
 }
