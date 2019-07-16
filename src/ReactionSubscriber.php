@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Feed;
+namespace GetStream\Doctrine;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;

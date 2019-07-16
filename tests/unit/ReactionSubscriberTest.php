@@ -2,7 +2,7 @@
 
 namespace GetStream\Doctrine\Unit;
 
-use AppBundle\Feed\ReactionSubscriber;
+use GetStream\Doctrine\ReactionSubscriber;
 use Cake\Chronos\Chronos;
 use GetStream\Doctrine\FeedManagerInterface;
 use GetStream\Doctrine\ModelListener;
