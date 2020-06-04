@@ -3,9 +3,15 @@
 namespace GetStream\Doctrine;
 
 use GetStream\Stream\Feed;
+use GetStream\Stream\Client;
 
 interface FeedManagerInterface
 {
+    /**
+     * @return Client
+     */
+    public function getClient();
+
     /**
      * @param string $feed
      * @param string $id
