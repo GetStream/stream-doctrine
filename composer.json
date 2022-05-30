@@ -2,7 +2,20 @@
     "name": "get-stream/stream-doctrine",
     "homepage": "https://getstream.io/",
     "description": "Build newsfeeds and activity feeds with Doctrine using getstream.io",
-    "keywords": ["stream", "feed", "feedly", "getstream", "activity", "newsfeed", "activity feed", "notification feed", "aggregated feed", "doctrine", "symfony", "orm"],
+    "keywords": [
+        "stream",
+        "feed",
+        "feedly",
+        "getstream",
+        "activity",
+        "newsfeed",
+        "activity feed",
+        "notification feed",
+        "aggregated feed",
+        "doctrine",
+        "symfony",
+        "orm"
+    ],
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -10,6 +23,21 @@
             "email": "hannes@getstream.io"
         }
     ],
+    "support": {
+        "issues": "https://github.com/GetStream/stream-doctrine/issues",
+        "docs": "https://getstream.io/activity-feeds/docs/php/?language=php"
+    },
+    "require": {
+        "php": ">=7.3",
+        "doctrine/orm": "^2.5",
+        "get-stream/stream": "^5.0"
+    },
+    "require-dev": {
+        "cakephp/chronos": "^2.3",
+        "phpunit/phpunit": "^9.5.20",
+        "friendsofphp/php-cs-fixer": "^3.0.0"
+    },
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "GetStream\\Doctrine\\": "src/"
@@ -20,14 +48,5 @@
             "GetStream\\Doctrine\\Unit\\": "tests/unit",
             "GetStream\\Doctrine\\Stubs\\": "tests/stubs"
         }
-    },
-    "require": {
-        "doctrine/orm": "^2.5",
-        "get-stream/stream": "^3.0"
-    },
-    "require-dev": {
-        "cakephp/chronos": "^1.1",
-        "phpunit/phpunit": "^5.7"
-    },
-    "minimum-stability": "stable"
+    }
 }

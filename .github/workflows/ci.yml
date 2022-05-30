@@ -1,0 +1,42 @@
+name: build
+
+on: [pull_request]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: 🧪 Test & lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.3', '7.4', '8.0', '8.1']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # gives the commit message linter access to all previous commits
+
+      - name: Commit lint
+        if: ${{ matrix.php-versions == '7.3' }}
+        uses: wagoid/commitlint-github-action@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: ast, mbstring, intl
+          ini-values: post_max_size=256M, max_execution_time=180
+          tools: composer
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Format
+        if: ${{ matrix.php-versions == '7.3' }}
+        run: vendor/bin/php-cs-fixer fix -v --dry-run --stop-on-violation
+
+      - name: Test
+        run: vendor/bin/phpunit --coverage-text
