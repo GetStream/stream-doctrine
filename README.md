@@ -12,6 +12,8 @@ You can sign up for a Stream account at [https://getstream.io/get_started](https
 
 Note there is also a lower level [PHP - Stream integration](https://github.com/getstream/stream-php) library which is suitable for all PHP applications.
 
+> 💡 This library is built for the **Feeds** product. The Chat product can be found [here](https://getstream.io/chat/docs/).
+
 ## Build Activity Streams, News Feeds, and More
 
 ![](https://dvqg2dogggmn6.cloudfront.net/images/mood-home.png)
@@ -37,9 +39,9 @@ Composer will install our latest version automatically.
 
 ### PHP compatibility
 
-Current releases require PHP `5.6` or higher, and depend on `doctrine/orm` version `2.5` or higher.
+Current releases require PHP `7.3` or higher, and depend on `doctrine/orm` version `2.5` or higher.
 
-See the [Travis configuration](.travis.yml) for details of how it is built and tested against different PHP versions.
+See the [GitHub build configuration](./.github/workflows) for details of how it is built and tested against different PHP versions.
 
 ## GetStream.io Dashboard
 
@@ -365,6 +367,6 @@ $client = $feedManager->getClient();
 
 ### Copyright and License Information
 
-Copyright (c) 2014-2017 Stream.io Inc, and individual contributors. All rights reserved.
+Copyright (c) 2014-2022 Stream.io Inc, and individual contributors. All rights reserved.
 
 See the file "LICENSE" for information on the history of this software, terms & conditions for usage, and a DISCLAIMER OF ALL WARRANTIES.

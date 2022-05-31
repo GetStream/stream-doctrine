@@ -117,7 +117,7 @@ class FeedManager implements FeedManagerInterface
      */
     public function getNewsFeeds($userId)
     {
-        return array_map(function($feed) use ($userId) {
+        return array_map(function ($feed) use ($userId) {
             return $this->getFeed($feed, $userId);
         }, array_combine($this->newsFeeds, $this->newsFeeds));
     }

@@ -39,7 +39,7 @@ class EnrichTest extends TestCase
         $result = $enrich->enrichActivities([]);
 
         // Assert
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertEmpty($result);
     }
 
@@ -54,7 +54,7 @@ class EnrichTest extends TestCase
         $result = $enrich->enrichAggregatedActivities([]);
 
         // Assert
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertEmpty($result);
     }
 

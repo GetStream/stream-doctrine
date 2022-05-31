@@ -90,7 +90,7 @@ class Enrich implements EnrichInterface
      */
     private function wrapActivities(array $activities)
     {
-        return array_map(function(array $activity) {
+        return array_map(function (array $activity) {
             return new EnrichedActivity($activity);
         }, $activities);
     }
@@ -136,11 +136,12 @@ class Enrich implements EnrichInterface
 
             $result = $this->entityManager
                 ->getRepository($type)
-                ->matching(Criteria::create()
+                ->matching(
+                    Criteria::create()
                     ->where(new Comparison('id', Comparison::IN, $identifiers))
-                )->getValues(); 
+                )->getValues();
 
-            $keys = array_map(function($item) {
+            $keys = array_map(function ($item) {
                 return $item->id();
             }, $result);
 
