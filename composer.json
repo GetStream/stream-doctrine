@@ -28,14 +28,14 @@
         "docs": "https://getstream.io/activity-feeds/docs/php/?language=php"
     },
     "require": {
-        "php": ">=7.3",
-        "doctrine/orm": "^2.5",
-        "get-stream/stream": "^5.0"
+        "php": ">=8.0",
+        "doctrine/orm": "^2.14.1",
+        "get-stream/stream": "^7.0.1"
     },
     "require-dev": {
         "cakephp/chronos": "^2.3",
-        "phpunit/phpunit": "^9.5.20",
-        "friendsofphp/php-cs-fixer": "^3.0.0"
+        "phpunit/phpunit": "^9.6.3",
+        "friendsofphp/php-cs-fixer": "^3.14.0"
     },
     "minimum-stability": "stable",
     "autoload": {
