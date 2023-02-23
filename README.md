@@ -39,7 +39,7 @@ Composer will install our latest version automatically.
 
 ### PHP compatibility
 
-Current releases require PHP `7.3` or higher, and depend on `doctrine/orm` version `2.5` or higher.
+Current releases require PHP `8.0` or higher, and depend on `doctrine/orm` version `2.14` or higher.
 
 See the [GitHub build configuration](./.github/workflows) for details of how it is built and tested against different PHP versions.
 

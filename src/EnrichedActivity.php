@@ -58,7 +58,7 @@ class EnrichedActivity implements ArrayAccess, IteratorAggregate
      * @param mixed $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->activityData[] = $value;
@@ -72,7 +72,7 @@ class EnrichedActivity implements ArrayAccess, IteratorAggregate
      *
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->activityData[$offset]);
     }
@@ -80,7 +80,7 @@ class EnrichedActivity implements ArrayAccess, IteratorAggregate
     /**
      * @param mixed $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->activityData[$offset]);
     }
@@ -90,7 +90,7 @@ class EnrichedActivity implements ArrayAccess, IteratorAggregate
      *
      * @return mixed|null
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->activityData[$offset]) ? $this->activityData[$offset] : null;
     }
@@ -100,7 +100,7 @@ class EnrichedActivity implements ArrayAccess, IteratorAggregate
      *
      * @return Traversable
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new ArrayIterator($this->activityData);
     }
