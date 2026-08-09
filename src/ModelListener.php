@@ -47,6 +47,17 @@ class ModelListener
     }
 
     /**
+     * @ORM\PostUpdate
+     *
+     * @param ActivityInterface $instance
+     */
+    public function activityUpdated(ActivityInterface $instance)
+    {
+        $activity = $this->createActivity($instance);
+        $this->feedManager->getClient()->updateActivities([$activity]);
+    }
+
+    /**
      * @param ActivityInterface $instance
      *
      * @return array
