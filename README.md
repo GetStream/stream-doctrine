@@ -1,4 +1,7 @@
-> **`stream-doctrine` is no longer maintained and is archived.** It integrated Feeds v2 with Doctrine. New projects should use Feeds v3 with [`getstream-php`](https://github.com/GetStream/getstream-php) (Composer `getstream/getstream-php`). Migration guide: https://getstream.io/activity-feeds/docs/php/v2-to-v3-migration/
+> **`stream-doctrine` is a Feeds v2 integration for Doctrine and is now in maintenance mode.** It will continue to
+> receive critical fixes, so it is safe to keep using with a v2 app. New projects should start
+> with Feeds v3 and [`getstream-php`](https://github.com/GetStream/getstream-php) (Composer `getstream/getstream-php`).
+> Migration guide: https://getstream.io/activity-feeds/docs/php/v2-to-v3-migration/
 
 # Stream Doctrine
 
